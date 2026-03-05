@@ -5,4 +5,8 @@ void main() {
 
   stdout.write("Masukkan tinggi: ");
   double tinggi = double.parse(stdin.readLineSync()!);
+
+  double luas = 0.5 * alas * tinggi;
+
+  print("Luas segitiga adalah: $luas");
 }
