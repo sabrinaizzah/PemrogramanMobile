@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   print("Program Menghitung Luas Segitiga");
   stdout.write("Masukkan alas: ");
@@ -6,7 +8,11 @@ void main() {
   stdout.write("Masukkan tinggi: ");
   double tinggi = double.parse(stdin.readLineSync()!);
 
-  double luas = 0.5 * alas * tinggi;
+  if (alas <= 0 || tinggi <= 0) {
+    print("Input tidak valid.");
+  } else {
+    double luas = 0.5 * alas * tinggi;
 
-  print("Luas segitiga adalah: $luas");
+    print("Luas segitiga adalah: $luas");
+  }
 }
